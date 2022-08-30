@@ -6,7 +6,7 @@
 /*   By: muilhan <muilhan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 13:13:42 by muilhan           #+#    #+#             */
-/*   Updated: 2022/08/28 13:14:43 by muilhan          ###   ########.fr       */
+/*   Updated: 2022/08/30 21:46:47 by muilhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,11 @@
 
 void	ft_putchar(char a)
 {
-    write(1, &a, 1);
-}/*
+	write(1, &a, 1);
+}
+/*
 int main()
 {
     ft_putchar('k');
     return (0);
 }*/
-
-
-
-
-

@@ -6,7 +6,7 @@
 /*   By: muilhan <muilhan@student.42istanbul.com.t  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 15:32:31 by muilhan           #+#    #+#             */
-/*   Updated: 2022/08/28 16:00:21 by muilhan          ###   ########.fr       */
+/*   Updated: 2022/08/30 22:15:42 by muilhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ void	ft_print_comb(void)
 	while (a < '7')
 	{
 		b = a + 1;
-		while(b < '8')
+		while (b < '8')
 		{
 			c = b + 1;
-			while(c < '9')
+			while (c < '9')
 			{
 				write(1, &a, 1);
 				write(1, &b, 1);
