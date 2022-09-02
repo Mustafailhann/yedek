@@ -1,34 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muilhan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 21:09:16 by muilhan           #+#    #+#             */
-/*   Updated: 2022/09/02 14:12:05 by muilhan          ###   ########.fr       */
+/*   Created: 2022/09/02 14:13:24 by muilhan           #+#    #+#             */
+/*   Updated: 2022/09/02 14:48:48 by muilhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	if (b != 0)
-	{
-		*div = a / b;
-		*mod = a % b;
-	}
+	int	div;
+	int	mod;
+
+	div = *a / *b;
+	mod = *a % *b;
+	*a = div;
+	*b = mod;
 }
 
 /*int	main(void)
 {
-	int	a,b,c,d;
+	int	c,d;
 
-	a = 14;
-	b =	8;
+	c = 19;
+	d = 6;
 
-	ft_div_mod(a, b, &c, &d);
-	printf("bölumun sonucu : %d \n", c);
-	printf("modun sonucu : %d \n", d);
+	ft_ultimate_div_mod(&c, &d);
+
+	printf(" *a : %d",c);
+	printf(" *b : %d",d);
 }*/

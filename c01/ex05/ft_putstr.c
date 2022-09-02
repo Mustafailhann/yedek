@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muilhan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 21:09:16 by muilhan           #+#    #+#             */
-/*   Updated: 2022/09/02 14:12:05 by muilhan          ###   ########.fr       */
+/*   Created: 2022/09/02 14:49:36 by muilhan           #+#    #+#             */
+/*   Updated: 2022/09/02 17:30:49 by muilhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
+#include<unistd.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_putchar(char c)
 {
-	if (b != 0)
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (*(str + i) != '\0')
 	{
-		*div = a / b;
-		*mod = a % b;
+		ft_putchar(str[i]);
+		i++;
 	}
 }
 
 /*int	main(void)
 {
-	int	a,b,c,d;
+	char test[] = "musti";
+	ft_putstri(test);
 
-	a = 14;
-	b =	8;
-
-	ft_div_mod(a, b, &c, &d);
-	printf("bölumun sonucu : %d \n", c);
-	printf("modun sonucu : %d \n", d);
 }*/

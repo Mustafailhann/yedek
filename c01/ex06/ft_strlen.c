@@ -1,34 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muilhan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 21:09:16 by muilhan           #+#    #+#             */
-/*   Updated: 2022/09/02 14:12:05 by muilhan          ###   ########.fr       */
+/*   Created: 2022/09/02 17:31:53 by muilhan           #+#    #+#             */
+/*   Updated: 2022/09/02 18:04:12 by muilhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<stdio.h>
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int ft_strlen(char *str)
 {
-	if (b != 0)
+	int length;
+	int	i;
+
+	length = 0;
+	i = 0;
+	while (str[i] != '\0')
 	{
-		*div = a / b;
-		*mod = a % b;
+		length++;
+		i++;
 	}
+	return length;
 }
 
-/*int	main(void)
+int	main()
 {
-	int	a,b,c,d;
+	int len;
 
-	a = 14;
-	b =	8;
+	ft_strlen("mustik");
 
-	ft_div_mod(a, b, &c, &d);
-	printf("bölumun sonucu : %d \n", c);
-	printf("modun sonucu : %d \n", d);
-}*/
+	len = ft_strlen("mustik");
+
+	printf("%d", len);
+
+
+}

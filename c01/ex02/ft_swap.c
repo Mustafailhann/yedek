@@ -1,46 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muilhan <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/01 20:48:37 by muilhan           #+#    #+#             */
-/*   Updated: 2022/09/02 12:47:44 by muilhan          ###   ########.fr       */
+/*   Created: 2022/09/02 12:49:16 by muilhan           #+#    #+#             */
+/*   Updated: 2022/09/02 13:59:08 by muilhan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include<stdio.h>
 
-void	ft_ultimate_ft(int *********nbr)
+void	ft_swap(int *ptr1, int *ptr2)
 {
-	*********nbr = 42;
+	int	c;
+
+	c = *ptr1;
+	*ptr1 = *ptr2;
+	*ptr2 = c;
 }
 
 int	main(void)
 {
-	int	a;
-	int *ptr1;
-	int	**ptr2;
-	int	***ptr3;
-	int	****ptr4;
-	int	*****ptr5;
-	int	******ptr6;
-	int	*******ptr7;
-	int	********ptr8;
-	int	*********ptr9;
-	a = 21;
-	ptr1 = &a;
-	ptr2 = &ptr1;
-	ptr3 = &ptr2;
-	ptr4 = &ptr3;
-	ptr5 = &ptr4;
-	ptr6 = &ptr5;
-	ptr7 = &ptr6;
-	ptr8 = &ptr7;
-	ptr9 = &ptr8;
-	printf("ilk degeri: %d\n", a);
-	ft_ultimate_ft(ptr9);
-	printf("son degeri: %d", a);
-}
+	int	x;
+	int	y;
 
+	x = 18;
+	y = 32;
+	ft_swap (&x, &y);
+	printf("x : %d y : %d", x, y);
+}
